@@ -80,7 +80,8 @@ li {
     position: absolute;
     top: -200px;
     width: 100%;
-    height: 500px;
+    min-height: 500px;
+    height: auto;
     background: white;
     border: 1px solid #adadad;
     display: flex;
@@ -97,22 +98,21 @@ li {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
-    min-width: 400px;
+    width: 100%;
 }
 
 .left-info {
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
 }
 
 .main-box ul {
     position: absolute;
-    display: inline-block;
-    top: 70%;
     left: 50%;
+    top: 60%;
     transform: translate(-50%, -50%);
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .main-box ul li {
@@ -134,27 +134,20 @@ li {
 }
 
 .main-info h1 {
-    position: relative;
+    position: absolute;
     color: #464646;
     padding-top: 20px;
+    border-bottom: 3px solid #1AA800;
+    max-width: 100%;
 }
 
-.main-info h1::before {
-    content: '';
+
+@media only screen and (max-width: 1000px) {
+.main-box ul {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #1AA800;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    margin: 20px auto;
 }
-
-@media screen and(max-width: 968px) {
-    .img-circle-card ul {
-        position: absolute;
-        display: inline-block;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 }
