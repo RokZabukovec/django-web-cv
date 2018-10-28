@@ -5,22 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
-
     <title>Rok Zabukovec</title>
 </head>
 <body>
 <div class="hero-img">
     <div class="container">
-        <div class="navbar">
-            <ul class="light-menu">
-                <li>O meni</li>
-                <li>Fotografija</li>
-                <li>Delovna mesta</li>
-            </ul>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav light-menu ml-auto">
+                    <li class="nav-item active m-auto">
+                        <a class="nav-link" href="#">O meni <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item m-auto">
+                        <a class="nav-link" href="#">Projekti</a>
+                    </li>
+                    <li class="nav-item m-auto">
+                        <a class="nav-link" href="#">Fotografija</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 </div>
 <div class="container">
@@ -30,19 +44,35 @@
                 {% load static %}
                 <img src="{% static 'img/me.jpg' %}" alt="">
             </div>
-               <ul>
-                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href=""><i class="fab fa-github"></i></a></li>
-                </ul>
+            <ul class="social-icons">
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href=""><i class="fab fa-github"></i></a></li>
+            </ul>
         </div>
         <div class="main-box main-info">
             <h1>ROK ZABUKOVEC</h1>
+            <p>Študent fakultete za informacijske študije & fotograf</p>
+            <ul class="basic-info-list">
+                <li>STAROST: <span>24</span></li>
+                <li>NASLOV: <span>Potočna vas 6, Novo mesto</span></li>
+                <li>EMAIL: <span>rok.zabukovec.it@gmail.com</span></li>
+                <li>TELEFON: <span>040-262-866</span></li>
+                <li><button class="btn btn-primary btn-prenos">Prenesi CV</button></li>
+            </ul>
         </div>
     </div>
 </div>
 
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
 </html>

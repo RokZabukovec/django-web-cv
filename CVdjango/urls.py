@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import include, url
-from personal import urls
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^', include('personal.urls')),
