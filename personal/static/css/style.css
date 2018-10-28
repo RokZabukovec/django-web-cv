@@ -71,7 +71,7 @@ a {
 
 .main-card {
     position: absolute;
-    top: -200px;
+    top: -100px;
     width: 100%;
     min-height: 500px;
     height: auto;
@@ -131,9 +131,19 @@ a {
     border-bottom: 3px solid #1AA800;
     max-width: 100%;
 }
-
+.main-info::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+    width: 1px;
+    background: #1AA800;
+    height: 30%;
+}
 .main-info p {
     color: #8c8c8c;
+    padding-left: 20px;
 }
 
 .basic-info-list {
@@ -160,9 +170,12 @@ a {
 }
 
 @media only screen and (max-width: 1000px) {
+    .container {
+        width: 100%;
+    }
 
     .main-card {
-        position: absolute;
+        position: relative;
         top: -100px;
         width: 100%;
         min-height: 800px;
@@ -200,9 +213,13 @@ a {
         border-bottom: 3px solid #1AA800;
         max-width: 100%;
         width: 100%;
-        font-size: 1.5em;
+        font-size: 1.3em;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .main-info p {
+        font-size: 0.8em;
     }
 
     .basic-info-list {
@@ -214,8 +231,13 @@ a {
         width: 80%;
     }
 
-    .main-info p {
-        color: #8c8c8c;
-        padding-left: 20px;
+    .basic-info-list span {
+        float: none;
+        font-weight: lighter;
+    }
+
+    .basic-info-list {
+        line-height: 300%;
+        font-size: 0.9em;
     }
 }
