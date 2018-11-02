@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
@@ -59,15 +58,67 @@
                 <li>NASLOV: <span>Potočna vas 6, Novo mesto</span></li>
                 <li>EMAIL: <span>rok.zabukovec.it@gmail.com</span></li>
                 <li>TELEFON: <span>040-262-866</span></li>
-                <li><a href="/download"><button class="btn btn-primary btn-prenos">Prenesi CV</button></a></li>
+                <li><a href="/download">
+                    <button class="btn btn-primary btn-prenos">Prenesi CV</button>
+                </a></li>
             </ul>
         </div>
     </section>
-    <section class="projects">
-        <h1>PROJECTS</h1>
-    </section>
 </div>
+<section class="tehnology">
+    <ul>
+        <li><i class="fab fa-js"></i></li>
+        <li>Vanilla JS</li>
+        <li>ES6</li>
+        <li>DOM Manipulation</li>
+        <li>AJAX</li>
+    </ul>
+    <ul>
+        <li><i class="fab fa-java"></i></li>
+        <li>Objektno programiranje</li>
+        <li>Omrežne aplikacije</li>
+        <li>Povezovanje z MySQL bazo</li>
+    </ul>
+    <ul>
+        <li><i class="fab fa-php"></i></li>
+        <li>Povezovanje z MySQL bazo</li>
+        <li>Izvajanje sej in implementacija piškotkov</li>
+        <li>Obdelava podatkov vnešenih s strani uporabnika</li>
+        <li>Login system</li>
+    </ul>
+    <ul>
+        <li><i class="fab fa-python"></i></li>
+        <li>MVC ogrodje DJANGO</li>
+        <li>Avtomatizacija opravil z orodjem CRON</li>
+        <li>Pobiranje podatkov iz spletnih strani</li>
+        <li>Pošiljanje email sporočil</li>
+    </ul>
+    <ul>
+        <li><i class="fab fas fa-database"></i></li>
+        <li>Kreiranje tabel</li>
+        <li>Vnos podatkov</li>
+        <li>Izbris podatkov</li>
+        <li>Upravljanje z tabelami</li>
+    </ul>
+</section>
+<section class="projects">
+    <div class="container">
+        <h1 class="section-title">PROJECTS</h1>
+        {% for project in projects %}
+            <div class="project-post">
+                <img src="{{ project.cover.url }}" width="100%" height="250px">
+                <h1>{{ project.title }}</h1>
+                <p> {{ project.overview }}</p>
+                <small> {{ project.posted }}</small>
+                <br>
+                <a href="{{ project.link }}">{{ project.link }}</a>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
 
+</section>
+<script src="{% static '/js/main.js' %}"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

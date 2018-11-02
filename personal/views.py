@@ -2,10 +2,13 @@
 from __future__ import unicode_literals
 from django.shortcuts import render
 from django.http import FileResponse, Http404
+from personal.models import Project
 import os
 
+
 def index(request):
-    contex = {}
+    projects = Project.objects.order_by('-posted')
+    contex = {'projects': projects}
     return render(request, "index.html", contex)
 
 

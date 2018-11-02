@@ -9,6 +9,10 @@ class Project(models.Model):
     def __str__(self):
         """String representation of an model"""
         return self.title
+
     title = models.CharField(max_length=100)
     overview = models.TextField()
+    cover = models.FileField(blank=True)
+    link = models.URLField(blank=True)
+    posted = models.DateField(auto_now=True)
 
