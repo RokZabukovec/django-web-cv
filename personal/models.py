@@ -7,7 +7,7 @@ class Project(models.Model):
     """Model for storing information about my projects. Posts will be
     presented on the main page in sequence"""
     def __str__(self):
-        """String representation of an model"""
+        """String representation of a model"""
         return self.title
 
     title = models.CharField(max_length=100)

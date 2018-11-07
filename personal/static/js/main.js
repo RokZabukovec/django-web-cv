@@ -11,7 +11,7 @@ function slideIn(arr) {
     }
 }
 
-window.addEventListener('scroll', ()=>{
+window.addEventListener('scroll', () => {
     slideIn(post)
 });
 

@@ -1,132 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
-          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
-    <title>Rok Zabukovec</title>
-</head>
-<body>
-<div class="hero-img">
+{% extends "base.html" %}
+{% block content %}
+    <div class="hero-img">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light index-nav">
+                <a>{{ location }}, {{ temp }}℃</a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav light-menu ml-auto">
+                        <li class="nav-item active m-auto">
+                            <a class="nav-link omeni" href="/">Home <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item m-auto">
+                            <a class="nav-link projekti" href="/projects">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav light-menu ml-auto">
-                    <li class="nav-item active m-auto">
-                        <a class="nav-link" href="#">O meni <span class="sr-only">(current)</span></a>
+        <section class="main-card">
+            <div class="main-box img-circle-card">
+                <div class="left-info">
+                    {% load static %}
+                    <img src="{% static 'img/me.jpg' %}" alt="">
+                </div>
+                <ul class="social-icons">
+                    <li><a href="https://instagram.com/_urban_exploration_/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/rok.zabukovec"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/rok-zabukovec-14bb818a/"><i class="fab fa-linkedin-in"></i></a>
                     </li>
-                    <li class="nav-item m-auto">
-                        <a class="nav-link" href="#">Projekti</a>
-                    </li>
-                    <li class="nav-item m-auto">
-                        <a class="nav-link" href="#">Fotografija</a>
-                    </li>
+                    <li><a href="https://github.com/RokZabukovec"><i class="fab fa-github"></i></a></li>
                 </ul>
             </div>
-        </nav>
-    </div>
-</div>
-<div class="container">
-    <section class="main-card">
-        <div class="main-box img-circle-card">
-            <div class="left-info">
-                {% load static %}
-                <img src="{% static 'img/me.jpg' %}" alt="">
+            <div class="main-box main-info">
+                <h1>ROK ZABUKOVEC</h1>
+                <p>Student of Faculty of information studies</p>
+                <ul class="basic-info-list">
+                    <li>Age: <span>24</span></li>
+                    <li>Address: <span>Potočna vas 6, Novo mesto</span></li>
+                    <li>Email: <span>kzabuk@gmail.com</span></li>
+                    <li>Phone: <span>040-262-866</span></li>
+                    <li><a href="/download">
+                        <button class="btn btn-primary btn-prenos">Download CV</button>
+                    </a></li>
+                </ul>
             </div>
-            <ul class="social-icons">
-                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href=""><i class="fab fa-github"></i></a></li>
-            </ul>
-        </div>
-        <div class="main-box main-info">
-            <h1>ROK ZABUKOVEC</h1>
-            <p>Študent fakultete za informacijske študije & fotograf</p>
-            <ul class="basic-info-list">
-                <li>STAROST: <span>24</span></li>
-                <li>NASLOV: <span>Potočna vas 6, Novo mesto</span></li>
-                <li>EMAIL: <span>rok.zabukovec.it@gmail.com</span></li>
-                <li>TELEFON: <span>040-262-866</span></li>
-                <li><a href="/download">
-                    <button class="btn btn-primary btn-prenos">Prenesi CV</button>
-                </a></li>
-            </ul>
+        </section>
+    </div>
+    <section class="tehnology">
+        <ul>
+            <li><i class="fab fa-js"></i></li>
+            <li>Vanilla JS</li>
+            <li>ES6</li>
+            <li>DOM Manipulation</li>
+            <li>AJAX</li>
+        </ul>
+        <ul>
+            <li><i class="fab fa-java"></i></li>
+            <li>Object-oriented programming</li>
+            <li>Network application</li>
+            <li>Connecting to MySQL</li>
+        </ul>
+        <ul>
+            <li><i class="fab fa-php"></i></li>
+            <li>Connecting to MySQL</li>
+            <li>Sessions and Cookies</li>
+            <li>User data processing</li>
+            <li>Login system</li>
+        </ul>
+        <ul>
+            <li><i class="fab fa-python"></i></li>
+            <li>MVC framework DJANGO</li>
+            <li>Task automation with CRON</li>
+            <li>Web scraping</li>
+            <li>Sending emails</li>
+        </ul>
+        <ul>
+            <li><i class="fab fas fa-database"></i></li>
+            <li>Creating tables</li>
+            <li>Data input</li>
+            <li>Data deletion</li>
+            <li>Table relationships</li>
+        </ul>
+    </section>
+    <section class="projects">
+        <div class="container">
+            <h1 class="section-title" id="section-title">LAST PROJECTS</h1>
+            {% for project in projects %}
+                <div class="project-post">
+                    <img src="{{ project.cover.url }}" width="100%" height="250px">
+                    <h1>{{ project.title }}</h1>
+                    <p> {{ project.overview }}</p>
+                    <small> {{ project.posted }}</small>
+                    <br>
+                    <a href="{{ project.link }}">{{ project.link }}</a>
+                </div>
+                <br>
+            {% endfor %}
+            <a href="/projects" class="btn btn-block btn-prenos show-all"> Show all projects</a>
+            <br>
         </div>
     </section>
-</div>
-<section class="tehnology">
-    <ul>
-        <li><i class="fab fa-js"></i></li>
-        <li>Vanilla JS</li>
-        <li>ES6</li>
-        <li>DOM Manipulation</li>
-        <li>AJAX</li>
-    </ul>
-    <ul>
-        <li><i class="fab fa-java"></i></li>
-        <li>Objektno programiranje</li>
-        <li>Omrežne aplikacije</li>
-        <li>Povezovanje z MySQL bazo</li>
-    </ul>
-    <ul>
-        <li><i class="fab fa-php"></i></li>
-        <li>Povezovanje z MySQL bazo</li>
-        <li>Izvajanje sej in implementacija piškotkov</li>
-        <li>Obdelava podatkov vnešenih s strani uporabnika</li>
-        <li>Login system</li>
-    </ul>
-    <ul>
-        <li><i class="fab fa-python"></i></li>
-        <li>MVC ogrodje DJANGO</li>
-        <li>Avtomatizacija opravil z orodjem CRON</li>
-        <li>Pobiranje podatkov iz spletnih strani</li>
-        <li>Pošiljanje email sporočil</li>
-    </ul>
-    <ul>
-        <li><i class="fab fas fa-database"></i></li>
-        <li>Kreiranje tabel</li>
-        <li>Vnos podatkov</li>
-        <li>Izbris podatkov</li>
-        <li>Upravljanje z tabelami</li>
-    </ul>
-</section>
-<section class="projects">
-    <div class="container">
-        <h1 class="section-title">PROJECTS</h1>
-        {% for project in projects %}
-            <div class="project-post">
-                <img src="{{ project.cover.url }}" width="100%" height="250px">
-                <h1>{{ project.title }}</h1>
-                <p> {{ project.overview }}</p>
-                <small> {{ project.posted }}</small>
-                <br>
-                <a href="{{ project.link }}">{{ project.link }}</a>
-            </div>
-            <br>
-        {% endfor %}
+    <footer class="footer">
+    <div class="contact">
+        <ul>
+            <h3>Rok Zabukovec</h3>
+            <li>Email: kzabuk@gmail.com</li>
+            <li>Phone: 040-262-866</li>
+        </ul>
+        <small>Rok zabukovec, 2018 </small>
     </div>
-
-</section>
-<script src="{% static '/js/main.js' %}"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+    </footer>
+{% endblock %}
